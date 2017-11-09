@@ -17,6 +17,15 @@ public class StudentTest {
 		temp.setJoindate(new Date());
 		obj.addData(temp);
 		System.out.println("Insetion done");
+		
+		temp = null;
+		System.out.println("retrieving data");
+		
+		temp = obj.showData(1233);
+		
+		System.out.println("Retrieval done");
+		
+		
 	}
 
 }
