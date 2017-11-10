@@ -10,8 +10,8 @@ public class StudentTest {
 	public static void main(String[] args) {
 		StudentDao obj = new StudentDao();
 		Student temp = new Student();
-		//temp.setId(1233);
-		temp.setName("Mohammad Rabbani");
+	
+		temp.setName("Ashima Khatoon");
 		temp.setDept("Electrical");
 		temp.setAddress("Delhi arjangarh, ayanagar.");
 		temp.setJoindate(new Date());
@@ -21,10 +21,9 @@ public class StudentTest {
 		temp = null;
 		System.out.println("retrieving data");
 		
-		temp = obj.showData(1);
+		temp = obj.showData(102);
 		
 		System.out.println("Retrieval done");
-		
 	}
 
 }

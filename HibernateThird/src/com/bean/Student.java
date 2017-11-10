@@ -4,14 +4,17 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-@Table(name="StudentPrac")
+@Table(name="StudentPracFOUR")
 public class Student {
 	
 	int id;
@@ -31,7 +34,9 @@ public class Student {
 	public Student() {}
 
 	@Id
-	@Column(name="studentid", nullable=false, length=30)
+	@Column(name="studentid")
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="my_seq_gen")
+	@SequenceGenerator(name="my_seq_gen", sequenceName="SFIVE", allocationSize = 1)
 	public int getId() {
 		return id;
 	}
